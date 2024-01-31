@@ -7,7 +7,7 @@ from uvcgan2.utils.parsers import add_preset_name_parser
 
 def parse_cmdargs():
     parser = argparse.ArgumentParser(
-        description = 'Train CelebaHQ Male2Female I2I model'
+        description = 'Train solar model'
     )
 
     add_preset_name_parser(parser, 'gen',  GEN_PRESETS, 'uvcgan2')
@@ -65,7 +65,7 @@ args_dict = {
                 'dataset' : {
                     'name'   : 'image-domain-hierarchy',
                     'domain' : domain,
-                    'path'   : 'celeba_hq_resized_lanczos',
+                    'path'   : 'solar_resized_lanczos',
                 },
                 'shape'           : (3, 256, 256),
                 'transform_train' : [
@@ -133,7 +133,7 @@ args_dict = {
         f'{cmdargs.gen}-{cmdargs.head}_({cmdargs.no_pretrain}'
         f':{cmdargs.lambda_cyc}:{cmdargs.lambda_gp}:{cmdargs.lr_gen})'
     ),
-    'outdir' : os.path.join(ROOT_OUTDIR, 'celeba_hq_resized_lanczos', 'm2f'),
+    'outdir' : os.path.join(ROOT_OUTDIR, 'solarresized_lanczos', 'turb2noturb'),
     'log_level'  : 'DEBUG',
     'checkpoint' : 50,
 }
