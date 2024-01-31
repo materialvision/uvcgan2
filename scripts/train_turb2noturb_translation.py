@@ -65,14 +65,14 @@ args_dict = {
                 'dataset' : {
                     'name'   : 'image-domain-hierarchy',
                     'domain' : domain,
-                    'path'   : '/content/drive/MyDrive/data/solar-big-bear-color-set',
+                    'path'   : 'celeba_hq_resized_lanczos',
                 },
                 'shape'           : (3, 256, 256),
                 'transform_train' : [
                     'random-flip-horizontal',
                 ],
                 'transform_test' : None,
-            } for domain in [ 'turb', 'unturb' ]
+            } for domain in [ 'male', 'female' ]
         ],
         'merge_type' : 'unpaired',
         'workers'    : 1,
@@ -127,13 +127,13 @@ args_dict = {
     'scheduler'       : None,
     'loss'            : 'lsgan',
     'steps_per_epoch' : 2000,
-    'transfer'        : get_transfer_preset(cmdargs),
+    'transfer'        : None,
 # args
     'label'  : (
         f'{cmdargs.gen}-{cmdargs.head}_({cmdargs.no_pretrain}'
         f':{cmdargs.lambda_cyc}:{cmdargs.lambda_gp}:{cmdargs.lr_gen})'
     ),
-    'outdir' : os.path.join(ROOT_OUTDIR, 'solar_turbulence_resized', 'turb2unturb'),
+    'outdir' : os.path.join(ROOT_OUTDIR, 'celeba_hq_resized_lanczos', 'm2f'),
     'log_level'  : 'DEBUG',
     'checkpoint' : 50,
 }
