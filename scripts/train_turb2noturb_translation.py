@@ -135,7 +135,7 @@ args_dict = {
     ),
     'outdir' : os.path.join(ROOT_OUTDIR, 'solarresized_lanczos', 'turb2unturb'),
     'log_level'  : 'DEBUG',
-    'checkpoint' : 50,
+    'checkpoint' : 2, #50
 }
 
 train(args_dict)
