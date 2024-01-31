@@ -72,7 +72,7 @@ args_dict = {
                     'random-flip-horizontal',
                 ],
                 'transform_test' : None,
-            } for domain in [ 'male', 'female' ]
+            } for domain in [ 'turb', 'unturb' ]
         ],
         'merge_type' : 'unpaired',
         'workers'    : 1,
@@ -133,7 +133,7 @@ args_dict = {
         f'{cmdargs.gen}-{cmdargs.head}_({cmdargs.no_pretrain}'
         f':{cmdargs.lambda_cyc}:{cmdargs.lambda_gp}:{cmdargs.lr_gen})'
     ),
-    'outdir' : os.path.join(ROOT_OUTDIR, 'solarresized_lanczos', 'turb2noturb'),
+    'outdir' : os.path.join(ROOT_OUTDIR, 'solarresized_lanczos', 'turb2unturb'),
     'log_level'  : 'DEBUG',
     'checkpoint' : 50,
 }
