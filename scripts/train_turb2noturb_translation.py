@@ -40,7 +40,7 @@ def get_transfer_preset(cmdargs):
         return None
 
     base_model = (
-        'celeba_hq_resized_lanczos/'
+        'solar-tiles-set/'
         'model_m(simple-autoencoder)_d(None)'
         f"_g({GEN_PRESETS[cmdargs.gen]['model']})_pretrain-{cmdargs.gen}"
     )
@@ -65,7 +65,7 @@ args_dict = {
                 'dataset' : {
                     'name'   : 'image-domain-hierarchy',
                     'domain' : domain,
-                    'path'   : 'solar_resized_lanczos',
+                    'path'   : 'solar-tiles-set',
                 },
                 'shape'           : (3, 256, 256),
                 'transform_train' : [
@@ -133,9 +133,9 @@ args_dict = {
         f'{cmdargs.gen}-{cmdargs.head}_({cmdargs.no_pretrain}'
         f':{cmdargs.lambda_cyc}:{cmdargs.lambda_gp}:{cmdargs.lr_gen})'
     ),
-    'outdir' : os.path.join(ROOT_OUTDIR, 'solarresized_lanczos', 'turb2unturb'),
+    'outdir' : os.path.join(ROOT_OUTDIR, 'solar-tiles-set', 'turb2unturb'),
     'log_level'  : 'DEBUG',
-    'checkpoint' : 2, #50
+    'checkpoint' : 1, #50
 }
 
 train(args_dict)
