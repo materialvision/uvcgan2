@@ -70,8 +70,13 @@ args_dict = {
                 'shape'           : (3, 256, 256),
                 'transform_train' : [
                     'random-flip-horizontal',
+                    { 'name' : 'resize',      'size' : 256, },
+                    { 'name' : 'random-crop', 'size' : 256, },
                 ],
-                'transform_test' : None,
+                'transform_test' : [
+                    { 'name' : 'resize',      'size' : 2048, },
+                    { 'name' : 'center-crop', 'size' : 2048, },
+                ],
             } for domain in [ 'turb', 'unturb' ]
         ],
         'merge_type' : 'unpaired',
