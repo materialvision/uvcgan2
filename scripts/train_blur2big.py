@@ -20,12 +20,12 @@ def parse_cmdargs():
 
     parser.add_argument(
         '--labmda-gp', dest = 'lambda_gp', type = float,
-        default = 0.01, help = 'magnitude of the gradient penalty'
+        default = 1.0, help = 'magnitude of the gradient penalty'
     )
 
     parser.add_argument(
         '--labmda-cycle', dest = 'lambda_cyc', type = float,
-        default = 10.0, help = 'magnitude of the cycle-consisntecy loss'
+        default = 5.0, help = 'magnitude of the cycle-consisntecy loss'
     )
 
     parser.add_argument(
