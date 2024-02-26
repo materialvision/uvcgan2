@@ -77,7 +77,7 @@ args_dict = {
                     { 'name' : 'resize',      'size' : 2048, },
                     { 'name' : 'center-crop', 'size' : 2048, },
                 ],
-            } for domain in [ 'A', 'B' ]
+            } for domain in [ 'trainA', 'trainB' ]
         ],
         'merge_type' : 'unpaired',
         'workers'    : 1,
