@@ -63,7 +63,7 @@ args_dict = {
         'datasets' : [
             {
                 'dataset' : {
-                    'name'   : 'cyclegan',
+                    'name'   : 'image-domain-hierarchy',
                     'domain' : domain,
                     'path'   : 'solar-blur-big-uvc2',
                 },
