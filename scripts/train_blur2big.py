@@ -67,11 +67,11 @@ args_dict = {
                     'domain' : domain,
                     'path'   : 'solar-blur-big-uvc2',
                 },
-                'shape'           : (3, 512, 512),
+                'shape'           : (3, 2048, 2048),
                 'transform_train' : [
                     'random-flip-horizontal',
                     { 'name' : 'resize',      'size' : 2048, },
-                    { 'name' : 'random-crop', 'size' : 512, },
+                    { 'name' : 'random-crop', 'size' : 2048, },
                 ],
                 'transform_test' : [
                     { 'name' : 'resize',      'size' : 2048, },
